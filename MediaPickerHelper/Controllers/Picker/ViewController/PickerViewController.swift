@@ -20,7 +20,7 @@ class PickerViewController: UIViewController {
             self.pickerButton.layer.cornerRadius = 16
         }
     }
-    
+
     fileprivate var pickerViewModel : MediaPickerHelper!
 
     override func viewDidLoad() {
@@ -51,7 +51,6 @@ extension PickerViewController{
             self.fileName.text = url.lastPathComponent
         }
     }
- 
 }
 
 extension PickerViewController : MediaPickerProtocols , FilePickerProtocols{
