@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Picker View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PickerViewController" customModule="MediaPickerHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMR-Bs-HtI">
+                                <rect key="frame" x="20.5" y="796" width="373" height="50"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6iB-NN-Y9a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Show Picker">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="showPickerView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qT5-bl-Wp6"/>
+                                </connections>
+                            </button>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWb-7Q-4AC">
+                                <rect key="frame" x="20.5" y="60" width="373" height="89.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="File Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgy-hf-CGs">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="89.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstItem="tgy-hf-CGs" firstAttribute="height" secondItem="nWb-7Q-4AC" secondAttribute="height" id="CYw-A1-P1N"/>
+                                    <constraint firstItem="tgy-hf-CGs" firstAttribute="width" secondItem="nWb-7Q-4AC" secondAttribute="width" id="Gi3-zI-hCe"/>
+                                    <constraint firstItem="tgy-hf-CGs" firstAttribute="centerX" secondItem="nWb-7Q-4AC" secondAttribute="centerX" id="h8i-c6-siN"/>
+                                    <constraint firstItem="tgy-hf-CGs" firstAttribute="centerY" secondItem="nWb-7Q-4AC" secondAttribute="centerY" id="v9C-e0-2OK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fMR-Bs-HtI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8qh-pP-Ggg"/>
+                            <constraint firstItem="nWb-7Q-4AC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="AyT-N6-el0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fMR-Bs-HtI" secondAttribute="bottom" constant="16" id="L3t-zP-wol"/>
+                            <constraint firstItem="nWb-7Q-4AC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oeD-Af-Z7C"/>
+                            <constraint firstItem="fMR-Bs-HtI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="s1C-8f-bBg"/>
+                            <constraint firstItem="nWb-7Q-4AC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="t2z-Q8-4JH"/>
+                            <constraint firstItem="nWb-7Q-4AC" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="yRf-Gl-AZv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fileName" destination="tgy-hf-CGs" id="9bF-fA-Tpr"/>
+                        <outlet property="fileView" destination="nWb-7Q-4AC" id="GiZ-8I-B8d"/>
+                        <outlet property="pickerButton" destination="fMR-Bs-HtI" id="x7G-4I-48M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-174" y="88"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
