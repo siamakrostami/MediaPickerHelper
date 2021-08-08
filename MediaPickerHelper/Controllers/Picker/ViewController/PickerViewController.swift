@@ -57,6 +57,7 @@ extension PickerViewController : MediaPickerProtocols , FilePickerProtocols{
     func mediaUrl(media: URL?, type: MediaPickerExtensions?) {
         guard let fileUrl = media else{return}
         self.showFileView(url: fileUrl)
+
     }
     
     func fileUrl(file: URL?, type: MediaPickerExtensions?) {
